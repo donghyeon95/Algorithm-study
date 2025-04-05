@@ -30,8 +30,6 @@ def solution(storage: List[str], requests: List[str]) -> int:
 
         while border:
             x, y = border.pop()
-            if x == 3 and y == 4:
-                pass
             for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
                 nx, ny = x + dx, y + dy
                 if 0 <= nx < n and 0 <= ny < m:
