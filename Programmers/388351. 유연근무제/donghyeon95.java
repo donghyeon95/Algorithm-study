@@ -23,5 +23,4 @@ class Solution {
 	public int getLimit(int goalTime) {
 		return (goalTime+10) % 100 >= 60? goalTime+100-50: goalTime+10;
 	}
-
 }
