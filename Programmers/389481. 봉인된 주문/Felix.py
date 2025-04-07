@@ -36,9 +36,6 @@ def solution(n: int, bans: List[str]) -> str:
     def define_char(length: int, pos: int, left: int, bans: List[str]) -> Tuple[str, int, List[str]]:
         ban_idx = 0
 
-        if pos == 1:
-            pass
-
         for i in range(26):
             char = CHARS[i]
             new = 26 ** (pos-1)
