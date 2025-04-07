@@ -2,8 +2,8 @@
 # 봉인된 주문
 
 
-from collections import defaultdict
-from typing import List, Tuple
+from functools import reduce
+from typing import Dict, List, Tuple
 
 
 BASE = 26
@@ -12,10 +12,14 @@ CHARS = list('abcdefghijklmnopqrstuvwxyz')
 
 def solution(n: int, bans: List[str]) -> str:
 
-    len_bans = defaultdict(list)
+    def build_len_bans(acc: Dict[int, List[str]], curr: str) -> Dict[int, List[str]]:
+        if len(curr) not in acc:
+            acc[len(curr)] = []
+        acc[len(curr)].append(curr)
 
-    for ban in bans:
-        len_bans[len(ban)].append(ban)
+        return acc
+
+    len_bans = reduce(build_len_bans, bans)
 
     bans = len_bans
 
