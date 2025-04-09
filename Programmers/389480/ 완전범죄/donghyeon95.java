@@ -41,6 +41,12 @@
 // }
 
 
+// 변환 해보면서 느낀점
+// 함수의 상태를 배열로 저장한다.
+// 배열의 값은 함수의 return 값
+// 배열은 필수 파라미터 값
+
+
 class Solution {
 	public int solution(int[][] info, int n, int m) {
 		int[][][] dp = new int[info.length][120][120];
