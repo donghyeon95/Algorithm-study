@@ -70,7 +70,7 @@ class Solution {
 		}
 
 		int doughnutCnt = 0;
-		for (int node : new HashSet<>(nodes)) {
+		for (int node : new HashSet<>(nodes)) { // 이 부분
 			if (nodes.contains(node)) {
 				removeEight(node, nodes, outDegree, new HashSet<>());
 				doughnutCnt++;
@@ -100,3 +100,5 @@ class Solution {
 		}
 	}
 }
+
+// + 에러 처리 하는 부분 확인
