@@ -136,7 +136,7 @@ class Solution {
 
 		banList.sort(Comparator
 			.comparingInt(String::length)
-			.thenComparing(Comparator.naturalOrder()));
+			.thenComparing(Comparator.naturalOrder()));  // <요거 문자열 비교, 정렬>
 
 
 		while (!banList.isEmpty()) {
