@@ -13,7 +13,7 @@ public class Main {
 		n = a[0];
 		m = a[1];
 		int[] arr = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-		System.out.println(solution(arr, m);
+		System.out.println(solution(arr, m));
 	}
 
 	public static long solution(int[] arr, int m) {
